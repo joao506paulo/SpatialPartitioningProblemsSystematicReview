@@ -62,7 +62,7 @@ m.setObjective(dis.sum(), GRB.MINIMIZE)
 m.optimize()
 
 ### Generate figure
-base = plotRegionalizationLabelingModel(x, w, stateMap, municipalities, showCentroids=False, showRegionCentroids=False, showBoundary=False)
+base = plotRegionalizationLabelingModel(x, w, stateMap, municipalities, showCentroids=False, showRegionCentroids=False, showBoundary=True)
 
 
 ### New Optimization Model - Optimizes population equity
@@ -108,4 +108,4 @@ m.setObjective(dis.sum(), GRB.MINIMIZE)
 m.optimize()
 
 ### Generate figure
-base = plotRegionalizationLabelingModel(x, w, stateMap, municipalities, showCentroids=False, showRegionCentroids=False, showBoundary=False)
+base = plotRegionalizationLabelingModel(x, w, stateMap, municipalities, showCentroids=False, showRegionCentroids=False, showBoundary=True)

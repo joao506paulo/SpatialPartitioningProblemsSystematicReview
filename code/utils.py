@@ -176,6 +176,7 @@ def workWithStateData(arquivo_dados_municipio, nrows_dados_municipio, arquivo_js
             municipio["CD_MUN"]), "Município [-]"]
         arcs = cidade["arcs"][0]
         municipio["PERIMETRO_DIVISA"] = 0
+        municipio["AVERAGE_INCOME"] = dados_mun.loc[int(municipio["CD_MUN"]), "PIB per capita - R$ [2021]"]
         municipio["centroide"] = mapa.loc[mapa[mapa["CD_MUN"] == cod_mun_atu].index[0], "centroid"]
         
         #Totalizadores
