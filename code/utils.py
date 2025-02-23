@@ -397,6 +397,25 @@ def plotRegionalizationLabelingModel(x, w, mapa, municipios, showCentroids, show
     return base
 
 
+def plotRegionalization(mapa, regioes, showCentroids, showBoundary):
+    
+    mapa = mapa.copy()
+    mapa.insert(2, "REGIAO", regioes, True)
+    
+    #Plot map of regions
+    base = mapa.plot(column="REGIAO", figsize=(10, 10), cmap="tab20", categorical=True)
+   
+    if showBoundary:
+        #Acentuar as fronteiras
+        base = mapa.boundary.plot(ax=base, color="white")
+    
+    if showCentroids:
+        #Printar os centroides
+        base = mapa.centroid.plot(ax=base, color="blue", markersize=7)
+            
+    return base
+
+
 def djikstraDistance(municipios, distancia):
     
     distancia_d = {}
