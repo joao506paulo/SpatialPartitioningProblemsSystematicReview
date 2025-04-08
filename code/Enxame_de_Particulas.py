@@ -1,4 +1,4 @@
-from utils import workWithStateData, computeDistanceMatrix, plotRegionalizationLabelingModel, djikstraDistance
+from utils import workWithStateData, computeDistanceMatrix, plotRegionalizationLabelingModel, djikstraDistance, plotRegionalization
 import gurobipy as gp
 from gurobipy import GRB
 import random
@@ -77,5 +77,14 @@ for i in range(100):
             if f1 < f1_best:
                 gBest = i["posicoes"]
 
-print(f1_best)        
-print(gBest)
+#print(f1_best)        
+res = []
+i = 0
+for a in gBest:
+    res.append(math.ceil(a))
+    i = i+1
+print(res)
+#a resposta não está correta, devo procurar o que está causando o erro
+#Não Apagar
+regionalization = [1,1,0,1,1,1,1,1,1,1,1,1,1,1,1]
+base = plotRegionalization(stateMap, regionalization, showCentroids=False, showBoundary=True)
