@@ -84,10 +84,8 @@ for k in range(3000): #3000
         if f1 < i["f1"]:
             pBest = i["posicoes"]
             i["f1"] = f1
-        if f1 < f1_best:
+        if f1 <= f1_best:
             f1_best = f1
-            print("atualizou")
-            print(f1_best)
             gBest = i["posicoes"]
 
         

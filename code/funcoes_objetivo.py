@@ -50,7 +50,7 @@ def func_1 (municipalities, mun_list, partition_list):
     #print(f1)
     return f1
 
-func_1(municipalities, mun_list, partition_list)
+#func_1(municipalities, mun_list, partition_list)
 
-#print(func_1(municipalities, mun_list, [2, 2, 1, 2, 2, 2, 2, 1, 1, 2, 2, 2, 1, 1, 2]))
+print(func_1(municipalities, mun_list, [2,2,1,2,2,2,2,2,2,1,2,2,2,2,2]))
 print(func_1(municipalities, mun_list, [1,1,2,1,1,1,1,1,1,1,1,1,1,1,1]))
